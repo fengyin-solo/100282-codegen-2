@@ -21,6 +21,7 @@ const Waterbody = () => import('@/views/waterbody/index.vue')
 const Code = () => import('@/views/code/index.vue')
 const Complaint = () => import('@/views/complaint/index.vue')
 const Seasonplan = () => import('@/views/seasonplan/index.vue')
+const Greenwaste = () => import('@/views/greenwaste/index.vue')
 
 const router = createRouter({
   history: createWebHistory(),
@@ -46,6 +47,7 @@ const router = createRouter({
     { path: '/code', name: 'code', component: Code },
     { path: '/complaint', name: 'complaint', component: Complaint },
     { path: '/seasonplan', name: 'seasonplan', component: Seasonplan },
+    { path: '/greenwaste', name: 'greenwaste', component: Greenwaste },
   ],
 })
 

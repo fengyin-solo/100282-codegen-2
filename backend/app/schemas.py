@@ -268,3 +268,23 @@ class SeasonplanEntry(BaseModel):
     field_5: str | None = None  # 编制人
     field_6: str | None = None  # 审批人
     field_7: str | None = None  # 方案状态
+
+
+class GreenwasteBatchPayload(BaseModel):
+    """园林废弃物批次建批参数。"""
+
+    batch_no: str | None = None
+    remark: str | None = None
+
+
+class GreenwasteImportPayload(BaseModel):
+    """园林废弃物过磅单导入参数，支持结构化单据或 CSV 文本。"""
+
+    tickets: list[dict[str, Any]] = Field(default_factory=list)
+    content: str | None = None
+
+
+class GreenwasteActionPayload(BaseModel):
+    """批次整批动作：post=整批过账，cancel=整批撤下。"""
+
+    action: str
